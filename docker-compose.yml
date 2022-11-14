@@ -8,9 +8,5 @@ fpm:
     image: php:fpm
     ports:
         - "9000:9000"
-
-    # seems like fpm receives the full path from nginx
-    # and tries to find the files in this dock, so it must
-    # be the same as nginx.root
     volumes:
         - ./:/complex/path/to/files/
